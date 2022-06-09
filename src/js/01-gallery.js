@@ -6,12 +6,11 @@ import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
 const galleryRef = document.querySelector('.gallery');
-const galleryMarkup = galleryItems.map(({preview, original, description}) => `<li class="gallery__item">
+const galleryMarkup = galleryItems.map(({preview, original, description}) => `
     <a class="gallery__link" href='${original}'>
         <img class="gallery__image" src='${preview}' alt='${description}' captions='${description}'/>
-    </a>
-</li>`).join("");
-galleryRef.insertAdjacentHTML("afterbegin", galleryMarkup);
+    </a>`).join("");
+galleryRef.insertAdjacentHTML("beforeend", galleryMarkup);
 
 galleryRef.addEventListener('click',onItemClick);
 
