@@ -5,8 +5,8 @@ const refs = {
 }
 
 const user = {
-    email,
-    message,
+//     email,
+//     message,
 }
 // const dataBase = localStorage.setItem("feedback-form-state", JSON.stringify(user))
 refs.form.addEventListener('submit', onFormSubmit);
@@ -25,7 +25,9 @@ function onEmailInput(e) {
 }
 
 function onTextareaInput(e) {
-    user.message = e.target.value;
-    localStorage.setItem("feedback-form-state",user.message)
-    console.log(e)
+    // user.message = e.target.value;
+
+    const user.emailvalue = e.target.value;
+    localStorage.setItem("feedback-form-state",value);
+    console.log(value);
 }
